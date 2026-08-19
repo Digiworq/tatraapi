@@ -1,0 +1,454 @@
+/* Master Section Layouts Styled with Alternating Midnight Blue and Warm Sand Editorial Flow */
+
+/* ==================== HERO (MIDNIGHT BLUE) ==================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--bg-midnight-deep);
+  user-select: none;
+  padding: 6rem 1rem 3rem 1rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0.5;
+  will-change: transform;
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(12,18,32,0.15) 0%, rgba(8,13,23,0.88) 100%),
+              linear-gradient(to top, rgba(8,13,23,1) 0%, transparent 60%, rgba(8,13,23,0.85) 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+.hero-devanagari-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero-badge-line {
+  height: 1px;
+  width: 2rem;
+  background: rgba(229, 169, 59, 0.4);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 8.5vw, 8.5rem);
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  line-height: 1.05;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.95);
+  word-break: break-word;
+}
+
+.hero-divider {
+  width: 5rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(229, 169, 59, 0.7), transparent);
+  margin: 1.5rem 0;
+}
+
+.hero-subtitle {
+  font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--text-sand-dim);
+  font-weight: 300;
+  max-width: 36rem;
+}
+
+.hero-scroll-prompt {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-text {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--text-midnight-muted);
+}
+
+.scroll-mouse-icon {
+  width: 18px;
+  height: 28px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.scroll-mouse-wheel {
+  width: 2.5px;
+  height: 5px;
+  border-radius: 2px;
+  background-color: var(--logo-gold);
+  animation: subtlePulse 2.4s infinite ease-in-out;
+}
+
+/* ==================== THE QUESTION (DEEP MIDNIGHT) ==================== */
+.question-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-midnight-deep);
+  overflow: hidden;
+  user-select: none;
+  padding: 6rem 1rem;
+}
+
+.question-bg-visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.question-watermark {
+  position: absolute;
+  font-family: var(--font-serif);
+  font-size: clamp(6rem, 20vw, 22rem);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: var(--logo-gold);
+  opacity: 0.06;
+  pointer-events: none;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.question-quote {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.6rem, 4.5vw, 3.8rem);
+  color: var(--text-sand-light);
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  margin: 1.2rem 0;
+}
+
+.question-subtext {
+  margin-top: 1.8rem;
+  font-size: clamp(0.72rem, 1.2vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-midnight-muted);
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== THE STORY (WARM SAND / PARCHMENT) ==================== */
+.story-section {
+  position: relative;
+  background-color: var(--bg-sand);
+  color: var(--text-dark-navy);
+  padding: clamp(5rem, 8vw, 9rem) 0;
+  overflow: hidden;
+}
+
+.story-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(4rem, 7vw, 8rem);
+}
+
+.story-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: center;
+}
+
+@media (max-width: 880px) {
+  .story-row {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+.story-card-visual {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(12, 20, 36, 0.15);
+  background-color: var(--bg-sand-card);
+  box-shadow: 0 15px 35px rgba(12, 20, 36, 0.15);
+  width: 100%;
+}
+
+.story-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s var(--ease-cinematic);
+}
+
+.story-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--text-dark-navy);
+  margin-bottom: 1.2rem;
+}
+
+.story-prose {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  color: var(--text-dark-body);
+  font-weight: 300;
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+
+/* ==================== CHARACTER ORBIT (MIDNIGHT BLUE) ==================== */
+.characters-section {
+  position: relative;
+  background-color: var(--bg-midnight);
+  padding: clamp(5rem, 8vw, 9rem) 0;
+  overflow: hidden;
+}
+
+.char-tabs-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.char-tab-btn {
+  padding: 0.6rem 1.2rem;
+  min-height: 40px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(19, 27, 46, 0.75);
+  color: var(--text-midnight-muted);
+  transition: all 0.25s ease;
+}
+
+.char-tab-btn:hover {
+  border-color: var(--logo-gold);
+  color: var(--text-sand-light);
+}
+
+.char-tab-btn.active {
+  border-color: var(--logo-gold);
+  background: rgba(229, 169, 59, 0.18);
+  color: var(--logo-gold-light);
+  box-shadow: 0 0 16px var(--logo-gold-glow);
+}
+
+.char-spotlight-box {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+  background: var(--bg-midnight-surface);
+  border: 1px solid var(--border-midnight-gold);
+  border-radius: 6px;
+  padding: clamp(1.5rem, 4vw, 4rem);
+  backdrop-filter: blur(20px);
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 900px) {
+  .char-spotlight-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.char-quote-text {
+  font-family: var(--font-editorial);
+  font-size: clamp(1.3rem, 2.4vw, 1.95rem);
+  color: var(--text-sand-light);
+  font-weight: 300;
+  line-height: 1.55;
+  font-style: italic;
+  margin: 1.2rem 0;
+}
+
+/* ==================== GENRE & TONE (MIDNIGHT BLUE) ==================== */
+.genretone-section {
+  position: relative;
+  background-color: var(--bg-midnight);
+  padding: clamp(5rem, 8vw, 9rem) 0;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ==================== COMPARABLE FILMS (WARM SAND) ==================== */
+.comparables-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-sand);
+  color: var(--text-dark-navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(4rem, 6vw, 7rem) 0;
+  overflow: hidden;
+}
+
+.comparables-track {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem clamp(1rem, 4vw, 4rem);
+  width: max-content;
+}
+
+@media (max-width: 768px) {
+  .comparables-section {
+    min-height: auto;
+  }
+  .comparables-track {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2rem;
+  }
+  .comparables-track > * {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+}
+
+.film-ref-card {
+  transition: all 0.35s ease;
+}
+
+.film-ref-card:hover {
+  border-color: var(--logo-gold);
+  box-shadow: 0 25px 60px rgba(229, 169, 59, 0.35);
+}
+
+.film-ref-card:hover .card-bg-img {
+  transform: scale(1.05);
+}
+
+/* ==================== LOCATIONS (MIDNIGHT BLUE) ==================== */
+.locations-section {
+  position: relative;
+  background-color: var(--bg-midnight-deep);
+  padding: clamp(5rem, 8vw, 9rem) 0;
+  overflow: hidden;
+}
+
+.loc-pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+@media (max-width: 768px) {
+  .loc-pipeline-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loc-selector-btn {
+  padding: 1.4rem;
+  min-height: 48px;
+  border-radius: 4px;
+  background: var(--bg-midnight-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.loc-selector-btn:hover {
+  border-color: var(--logo-gold);
+}
+
+.loc-selector-btn.active {
+  background: var(--bg-midnight-card);
+  border-color: var(--logo-gold);
+  box-shadow: 0 8px 24px var(--logo-gold-glow);
+}
+
+/* ==================== INQUIRIES (WARM SAND) ==================== */
+.inquiries-section {
+  position: relative;
+  background-color: var(--bg-sand);
+  color: var(--text-dark-navy);
+  padding: clamp(5rem, 8vw, 9rem) 0;
+  overflow: hidden;
+}
+
+.inquiries-box {
+  background: var(--bg-midnight-deep);
+  color: var(--text-sand-light);
+  border: 1px solid var(--border-midnight-gold);
+  border-radius: 6px;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px rgba(12, 20, 36, 0.45);
+}
