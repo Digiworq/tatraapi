@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FILM_CONFIG } from '../config/filmData';
+import varanasiExpImg from '../assets/images/varanasi-experience.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +64,7 @@ export const VaranasiExperience: React.FC = () => {
         overflow: 'hidden',
         backgroundColor: 'var(--bg-midnight-deep)',
         userSelect: 'none',
+        padding: '6rem 1rem',
       }}
     >
       <div
@@ -70,7 +72,7 @@ export const VaranasiExperience: React.FC = () => {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `radial-gradient(circle at center, rgba(12,18,32,0.1) 0%, rgba(8,13,23,0.85) 100%), url('/assets/images/varanasi-experience.jpg')`,
+          backgroundImage: `radial-gradient(circle at center, rgba(12,18,32,0.1) 0%, rgba(8,13,23,0.85) 100%), url('${varanasiExpImg}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.45,

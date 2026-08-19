@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown } from 'lucide-react';
 import { FILM_CONFIG } from '../config/filmData';
 import { HeroCanvas } from '../components/HeroCanvas';
+import heroVaranasiImg from '../assets/images/hero-varanasi.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,7 +72,7 @@ export const Hero: React.FC = () => {
         ref={bgImageRef}
         className="hero-bg"
         style={{
-          backgroundImage: `radial-gradient(circle at center, rgba(12,18,32,0.1) 0%, rgba(8,13,23,0.92) 100%), url('/assets/images/hero-varanasi.jpg')`,
+          backgroundImage: `radial-gradient(circle at center, rgba(12,18,32,0.1) 0%, rgba(8,13,23,0.92) 100%), url('${heroVaranasiImg}')`,
         }}
       />
 
@@ -87,11 +88,11 @@ export const Hero: React.FC = () => {
           top: '40%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '600px',
+          width: 'min(600px, 90vw)',
           height: '300px',
           background: 'rgba(229, 169, 59, 0.08)',
           borderRadius: '50%',
-          filter: 'blur(120px)',
+          filter: 'blur(100px)',
           pointerEvents: 'none',
         }}
       />

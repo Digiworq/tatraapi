@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { FILM_CONFIG, LocationItem } from '../config/filmData';
 import { MapPin } from 'lucide-react';
 
-// Direct asset imports
-import newYorkImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/robotics_newyork_1787130354216.jpg';
-import bengaluruImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/bengaluru_base_1787130804475.jpg';
-import varanasiImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/varanasi_experience_1787130785887.jpg';
+// Relative asset imports
+import newYorkImg from '../assets/images/robotics-newyork.jpg';
+import bengaluruImg from '../assets/images/bengaluru-base.jpg';
+import varanasiImg from '../assets/images/varanasi-experience.jpg';
 
 const LOCATION_ARTWORKS: Record<string, string> = {
   "NEW YORK": newYorkImg,

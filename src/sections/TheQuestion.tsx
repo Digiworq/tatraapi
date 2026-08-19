@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FILM_CONFIG } from '../config/filmData';
+import butterImg from '../assets/images/childhood-butter.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,7 +77,7 @@ export const TheQuestion: React.FC = () => {
         ref={bgVisualRef}
         className="question-bg-visual"
         style={{
-          backgroundImage: `radial-gradient(circle at center, rgba(12,18,32,0.2) 0%, rgba(8,13,23,0.95) 100%), url('/assets/images/childhood-butter.jpg')`,
+          backgroundImage: `radial-gradient(circle at center, rgba(12,18,32,0.2) 0%, rgba(8,13,23,0.95) 100%), url('${butterImg}')`,
         }}
       />
 

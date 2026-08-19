@@ -5,13 +5,13 @@ import { FILM_CONFIG, ComparableFilm } from '../config/filmData';
 import { Clapperboard } from 'lucide-react';
 import { TiltCard } from '../components/TiltCard';
 
-// Direct asset imports
-import namesakeImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/ref_the_namesake_1787139230432.jpg';
-import lifeOfPiImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/ref_life_of_pi_1787139619793.jpg';
-import lunchboxImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/ref_lunchbox_1787139644506.jpg';
-import infinityImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/ref_infinity_1787139663668.jpg';
-import pkImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/ref_pk_1787139764946.jpg';
-import treeOfLifeImg from 'C:/Users/Admin/.gemini/antigravity/brain/8334074e-e077-4cbb-8c5d-7e188124a56f/convergence_art_1787130454543.jpg';
+// Relative asset imports (clean for GitHub and Vercel build)
+import namesakeImg from '../assets/images/ref-namesake.jpg';
+import lifeOfPiImg from '../assets/images/ref-life-of-pi.jpg';
+import lunchboxImg from '../assets/images/ref-lunchbox.jpg';
+import infinityImg from '../assets/images/ref-infinity.jpg';
+import pkImg from '../assets/images/ref-pk.jpg';
+import treeOfLifeImg from '../assets/images/ref-treeoflife.jpg';
 
 const CARD_IMAGES: Record<string, string> = {
   "The Namesake": namesakeImg,

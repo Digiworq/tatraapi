@@ -4,6 +4,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FILM_CONFIG, StoryChapter } from '../config/filmData';
 import { TiltCard } from '../components/TiltCard';
 
+// Relative asset imports
+import childhoodButterImg from '../assets/images/childhood-butter.jpg';
+import roboticsNewYorkImg from '../assets/images/robotics-newyork.jpg';
+import convergenceImg from '../assets/images/convergence.jpg';
+import heroVaranasiImg from '../assets/images/hero-varanasi.jpg';
+
+const CHAPTER_IMAGES: Record<string, string> = {
+  "01": childhoodButterImg,
+  "02": roboticsNewYorkImg,
+  "03": convergenceImg,
+  "04": heroVaranasiImg,
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const StoryMoments: React.FC = () => {
@@ -77,6 +90,7 @@ export const StoryMoments: React.FC = () => {
       <div className="film-container story-grid">
         {FILM_CONFIG.storyChapters.map((chap: StoryChapter, idx: number) => {
           const isImageLeft = idx % 2 === 1; // Movement 02 and 04 have Image on Left, Text on Right
+          const imgSrc = CHAPTER_IMAGES[chap.num] || chap.imagePath;
 
           const textColumn = (
             <div key="text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
@@ -108,7 +122,7 @@ export const StoryMoments: React.FC = () => {
               <div
                 className="story-img"
                 style={{
-                  backgroundImage: `radial-gradient(circle at center, rgba(12,20,36,0.05) 0%, rgba(12,20,36,0.4) 100%), url('${chap.imagePath}')`,
+                  backgroundImage: `radial-gradient(circle at center, rgba(12,20,36,0.05) 0%, rgba(12,20,36,0.4) 100%), url('${imgSrc}')`,
                 }}
               />
             </TiltCard>
